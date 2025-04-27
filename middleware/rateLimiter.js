@@ -21,7 +21,7 @@ const limiter = rateLimit({
 
 class RateLimiter {
   constructor() {
-    logger.info('rateLimiter initialized.');
+    console.log('rateLimiter initialized.');
   }
 
   middleware() {
