@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3000",
+      "url": "https://example-rest-api-docs.vercel.app",
       "description": "main production server, where dreams go to die."
     }
   ],
@@ -15,7 +15,7 @@
     {
       "name": "Test"
     }
-  ]
+  ],
   "paths": {
     "/test/hello": {
       "get": {
