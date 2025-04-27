@@ -1,0 +1,24 @@
+{
+  "name": "Test-API",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm i . && node .",
+    "dev": "npm i . && node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "express-rate-limit": "latest",
+    "cors": "^2.8.5",
+    "helmet": "^8.1.0",
+    "dotenv": "latest"
+  }
+}

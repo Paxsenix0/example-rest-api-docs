@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.jsdelivr.net https://unpkg.com;">
+        <title>Test Docs | Weird API Ever.</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="docs/styles.css" />
+    </head>
+    <body class="bg-background text-text">
+        <div id="loading-overlay" class="loading-overlay">
+            <div class="loading-container">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Hey! Don't ready to explore! >:(</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col min-h-screen">
+            <header
+                class="header-gradient p-4 md:p-6 shadow-xl sticky top-0 z-50"
+            >
+                <div
+                    class="container mx-auto flex justify-between items-center"
+                >
+                    <div class="flex items-center space-x-3">
+                        <div class="logo-container">
+                            <svg
+                                class="h-8 w-8"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M12 2L2 7L12 12L22 7L12 2Z"
+                                    stroke="var(--primary)"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M2 17L12 22L22 17"
+                                    stroke="var(--accent)"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M2 12L12 17L22 12"
+                                    stroke="var(--secondary)"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <h1 class="text-2xl font-bold">
+                            <span class="text-primary">Test</span
+                            ><span class="text-accent">API</span>
+                        </h1>
+                    </div>
+
+                    <div class="flex items-center space-x-4">
+                        <div class="flex items-center space-x-2">
+                            <span class="api-version-badge">
+                                <i class="fas fa-code-branch mr-2"></i>v1.0.0
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex-grow content-gradient p-4 md:p-8 overflow-y-auto">
+                <div class="max-w-5xl mx-auto">
+                    <div class="intro-section mb-8">
+                        <h2
+                            class="text-3xl md:text-4xl font-bold mb-4 text-gradient"
+                        >
+                            Test-API :P
+                        </h2>
+                        <div
+                            class="markdown-content mb-6"
+                            id="api-description"
+                        ></div>
+
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <a href="/support" class="gradient-btn">
+                                <i class="fas fa-paper-plane mr-2"></i>Web
+                                Support
+                            </a>
+                            <a
+                                href="https://t.me/PaxSenixDoc"
+                                class="telegram-btn"
+                                target="_blank"
+                            >
+                                <i class="fab fa-telegram-plane mr-2"></i
+                                >Telegram Community
+                            </a>
+                        </div>
+
+                        <div class="base-url-container mb-4">
+                            <div class="flex items-center">
+                                <span class="text-text-secondary mr-2"
+                                    >Base URL:</span
+                                >
+                                <span class="text-primary font-medium font-mono"
+                                    >https://localhost:3000</span
+                                >
+                                <button
+                                    class="copy-base-url-btn ml-2"
+                                    data-text="https://api.paxsenix.biz.id"
+                                >
+                                    <i class="far fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="search-container mb-8">
+                            <div class="relative">
+                                <input
+                                    type="text"
+                                    placeholder="Search endpoints..."
+                                    class="search-input w-full"
+                                    id="search-input"
+                                />
+                                <i
+                                    class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-text-secondary"
+                                ></i>
+                            </div>
+                        </div>
+
+                        <div class="category-tabs-container mb-8">
+                            <div
+                                class="category-tabs"
+                                id="category-chips"
+                            ></div>
+                        </div>
+                    </div>
+
+                    <div id="endpoints-container" class="space-y-6"></div>
+                </div>
+            </main>
+
+            <footer class="footer-gradient py-6 px-4 md:px-8">
+                <div class="container mx-auto">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center"
+                    >
+                        <div class="mb-4 md:mb-0">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-primary font-bold"
+                                    >TestAPI</span
+                                >
+                                <span
+                                    class="text-xs px-2 py-1 rounded-full bg-surface text-text-secondary"
+                                    >v1.0.0</span
+                                >
+                            </div>
+                            <p class="text-sm text-text-secondary mt-1">
+                                © 2025 This might be your company or whatever. All rights reserved.
+                            </p>
+                        </div>
+
+                        <div class="flex space-x-6">
+                            <a href="#" class="footer-link">
+                                <i class="fas fa-book mr-2"></i>Documentation
+                            </a>
+                            <a
+                                href="https://t.me/PaxSenixDoc"
+                                class="footer-link"
+                                target="_blank"
+                            >
+                                <i class="fab fa-telegram-plane mr-2"></i
+                                >Telegram
+                            </a>
+                            <a href="/support" class="footer-link">
+                                <i class="fas fa-question-circle mr-2"></i
+                                >Support
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <template id="endpoint-template">
+            <div class="endpoint-card">
+                <div class="endpoint-header">
+                    <div class="flex items-center">
+                        <span class="method-tag">METHOD</span>
+                        <span class="endpoint-path">/api/path</span>
+                    </div>
+                    <button class="endpoint-toggle-btn">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+
+                <div class="endpoint-summary"></div>
+
+                <div class="endpoint-content">
+                    <div class="endpoint-description mb-6">
+                        <div class="markdown-content"></div>
+                    </div>
+
+                    <div class="endpoint-tabs">
+                        <div class="tabs-header">
+                            <button
+                                class="tab-btn active"
+                                data-tab="documentation"
+                            >
+                                Documentation
+                            </button>
+                            <button class="tab-btn" data-tab="try-it">
+                                Try It Out
+                            </button>
+                        </div>
+
+                        <div class="tabs-content">
+                            <div class="tab-pane active" id="documentation">
+                                <div class="space-y-6">
+                                    <div class="parameters-section">
+                                        <h4 class="section-title">
+                                            Parameters
+                                        </h4>
+                                        <div class="parameters-table-container">
+                                            <table class="parameters-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Type</th>
+                                                        <th>Required</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody
+                                                    class="parameters-list"
+                                                ></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="responses-section">
+                                        <h4 class="section-title">Responses</h4>
+                                        <div class="response-examples"></div>
+                                    </div>
+
+                                    <div class="code-example-section">
+                                        <h4 class="section-title">
+                                            Code Example
+                                        </h4>
+                                        <div class="code-block-container">
+                                            <pre
+                                                class="code-block curl-example"
+                                            ></pre>
+                                            <button
+                                                class="code-copy-btn"
+                                                data-target="curl-example"
+                                            >
+                                                <i class="far fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane" id="try-it">
+                                <div class="try-it-container">
+                                    <div class="swagger-try-it">
+                                        <div class="try-it-params">
+                                            <h4 class="section-title">
+                                                Parameters
+                                            </h4>
+                                            <div
+                                                class="parameters-inputs"
+                                            ></div>
+                                        </div>
+
+                                        <div class="try-it-execute">
+                                            <button class="execute-btn">
+                                                <i class="fas fa-play mr-2"></i
+                                                >Execute
+                                            </button>
+                                        </div>
+
+                                        <div class="try-it-response hidden">
+                                            <h4
+                                                class="section-title response-title"
+                                            >
+                                                Server response
+                                                <span
+                                                    class="response-status"
+                                                ></span>
+                                                <span
+                                                    class="response-time"
+                                                ></span>
+                                            </h4>
+
+                                            <div class="response-body">
+                                                <h5 class="response-subtitle">
+                                                    Response body
+                                                </h5>
+                                                <div
+                                                    class="code-editor-container"
+                                                >
+                                                    <pre
+                                                        class="code-editor response-viewer"
+                                                    ></pre>
+                                                    <button
+                                                        class="copy-response-btn"
+                                                    >
+                                                        <i
+                                                            class="far fa-copy"
+                                                        ></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="response-headers">
+                                                <h5 class="response-subtitle">
+                                                    Response headers
+                                                </h5>
+                                                <div
+                                                    class="code-editor-container"
+                                                >
+                                                    <pre
+                                                        class="code-editor response-headers-viewer"
+                                                    ></pre>
+                                                </div>
+                                            </div>
+
+                                            <div class="response-curl">
+                                                <h5 class="response-subtitle">
+                                                    Curl
+                                                </h5>
+                                                <div
+                                                    class="code-editor-container"
+                                                >
+                                                    <pre
+                                                        class="code-editor response-curl-viewer"
+                                                    ></pre>
+                                                    <button
+                                                        class="copy-curl-btn"
+                                                    >
+                                                        <i
+                                                            class="far fa-copy"
+                                                        ></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <div id="selection-dialog" class="selection-dialog hidden">
+            <div class="dialog-backdrop"></div>
+            <div class="dialog-container">
+                <div class="dialog-header">
+                    <h3 class="dialog-title">Select a value</h3>
+                    <button class="dialog-close-btn">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="dialog-content">
+                    <div class="dialog-description mb-4"></div>
+                    <div class="dialog-options"></div>
+                </div>
+                <div class="dialog-footer">
+                    <button class="dialog-cancel-btn">Cancel</button>
+                    <button class="dialog-confirm-btn">Confirm</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="docs/app.js"></script>
+    </body>
+</html>
