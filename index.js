@@ -13,7 +13,7 @@ process.on("unhandledRejection", (reason, promise) => console.error("Unhandled R
 
 const app = express();
 app.set('trust proxy', true);
-/app.use(helmet.contentSecurityPolicy({
+app.use(helmet.contentSecurityPolicy({
   directives: {
     defaultSrc: ["'self'"],
     scriptSrc: [
