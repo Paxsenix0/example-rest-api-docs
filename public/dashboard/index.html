@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            PaxSenix-API: Empowering Developers with Free RESTful APIs
+        </title>
+        <meta
+            name="description"
+            content="Free REST API services for WhatsApp, Telegram bots, and innovative projects. Build powerful applications with our versatile API platform."
+        />
+        <meta
+            name="keywords"
+            content="API, REST, WhatsApp, Telegram, bots, free API"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="PaxSenix-API: Free REST API Services"
+        />
+        <meta
+            property="og:description"
+            content="Build powerful applications with our free REST API services."
+        />
+        <meta
+            property="og:image"
+            content="https://files.catbox.moe/p0dgj8.jpg"
+        />
+        <meta property="og:url" content="https://api.paxsenix.biz.id" />
+        <meta name="theme-color" content="#1e1e2e" />
+
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="nav-logo">PaxSenix<span>API</span></a>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link active">Home</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li>
+                        <a href="/docs" class="nav-link nav-button"
+                            >Documentation</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Powerful REST APIs for
+                        <span class="gradient-text">Developers</span>
+                    </h1>
+                    <p class="hero-description">
+                        Unlock the power of free REST services for your
+                        WhatsApp, Telegram bots, and innovative projects. Build
+                        without limits.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="/docs" class="btn btn-primary"
+                            >Explore Documentation</a
+                        >
+                        <button
+                            id="scrollProjectBeton"
+                            class="btn btn-secondary"
+                            onclick="scrollToProjects()"
+                        >
+                            View Projects
+                        </button>
+                    </div>
+
+                    <div class="hero-cards">
+                        <div class="hero-card">
+                            <i class="material-symbols-outlined"
+                                >rocket_launch</i
+                            >
+                            <span>Fast Integration</span>
+                        </div>
+                        <div class="hero-card">
+                            <i class="material-symbols-outlined">code</i>
+                            <span>Simple API Calls</span>
+                        </div>
+                        <div class="hero-card">
+                            <i class="material-symbols-outlined"
+                                >attach_money</i
+                            >
+                            <span>Completely Free</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
+                            <span class="code-dot"></span>
+                            <span class="code-title">Example API Request</span>
+                        </div>
+                        <pre class="code-block"><code><span class="code-function">fetch</span>(<span  
+    class="code-string">'https://api.paxsenix.biz.id/v1/chat/completions'</span>, {  
+  <span class="code-property">method</span>: <span class="code-string">'POST'</span>,  
+  <span class="code-property">headers</span>: {  
+    <span class="code-string">'Content-Type'</span>: <span class="code-string">'application/json'</span>,  
+    <span class="code-string">'Authorization'</span>: <span  
+    class="code-string">'Bearer COMING_SOON'</span>  
+  },  
+  <span class="code-property">body</span>: <span class="code-function">JSON.stringify</span>({  
+    <span class="code-property">model</span>: <span class="code-string">"gpt-4o-mini"</span>,  
+    <span class="code-property">messages</span>: [{
+      <span class="code-property">role</span>: <span class="code-string">"user"</span>,
+      <span class="code-property">content</span>: <span class="code-string">"Hello!"</span>
+    }]  
+  })  
+})  
+.<span class="code-function">then</span>(<span class="code-property">response</span> => <span class="code-property">response</span>.<span class="code-function">json</span>())  
+.<span class="code-function">then</span>(<span class="code-property">data</span> => <span class="code-function">console.log</span>(<span class="code-property">data</span>));</code></pre>
+                    </div>
+                </div>
+            </section>
+            <!-- Stats Section -->
+            <section class="stats-section" id="stats">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Growing <span class="gradient-text">Impact</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Our platform's reach continues to expand as more
+                        developers discover our services
+                    </p>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div
+                            class="stat-number"
+                            data-target="300"
+                            data-suffix="K+"
+                        >
+                            0
+                        </div>
+                        <div class="stat-label">Total API Requests</div>
+                    </div>
+                    <div class="stat-card">
+                        <div
+                            class="stat-number"
+                            data-target="100"
+                            data-suffix="+"
+                        >
+                            0
+                        </div>
+                        <div class="stat-label">API Features</div>
+                    </div>
+                    <div class="stat-card">
+                        <div
+                            class="stat-number"
+                            data-target="500"
+                            data-suffix="+"
+                        >
+                            0
+                        </div>
+                        <div class="stat-label">Happy Developers</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features" id="features">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Why Choose
+                        <span class="gradient-text">PaxSenix-API</span>?
+                    </h2>
+                    <p class="section-subtitle">
+                        Powerful features designed to make development simpler
+                        and more efficient
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-container">
+                            <i class="material-symbols-outlined feature-icon"
+                                >rocket_launch</i
+                            >
+                        </div>
+                        <h3>Effortless Integration</h3>
+                        <p>
+                            Seamlessly integrate our REST API into your existing
+                            WhatsApp and Telegram bot projects with minimal
+                            effort and clear documentation.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-container">
+                            <i class="material-symbols-outlined feature-icon"
+                                >build</i
+                            >
+                        </div>
+                        <h3>Versatile Functionality</h3>
+                        <p>
+                            Equip your bots with a wide array of
+                            functionalities, from data retrieval to advanced
+                            interactions, all through a unified API.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-container">
+                            <i class="material-symbols-outlined feature-icon"
+                                >attach_money</i
+                            >
+                        </div>
+                        <h3>Completely Free</h3>
+                        <p>
+                            Access powerful REST services without any cost,
+                            empowering developers of all levels to build amazing
+                            applications without financial barriers.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-container">
+                            <i class="material-symbols-outlined feature-icon"
+                                >lightbulb</i
+                            >
+                        </div>
+                        <h3>Boost Your Creativity</h3>
+                        <p>
+                            Fuel your innovative ideas and bring them to life by
+                            leveraging our free API for diverse project
+                            requirements and creative solutions.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-container">
+                            <i class="material-symbols-outlined feature-icon"
+                                >security</i
+                            >
+                        </div>
+                        <h3>Secure & Reliable</h3>
+                        <p>
+                            Built with security in mind, ensuring your
+                            applications are robust and your data is protected
+                            with industry-standard encryption.
+                        </p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-container">
+                            <i class="material-symbols-outlined feature-icon"
+                                >support_agent</i
+                            >
+                        </div>
+                        <h3>Dedicated Support</h3>
+                        <p>
+                            We offer community support and comprehensive
+                            documentation to help you get started and
+                            troubleshoot any issues you might encounter.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- API Endpoints Section -->
+            <section class="endpoints">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Popular <span class="gradient-text">Endpoints</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Explore some of our most widely used API endpoints
+                    </p>
+                </div>
+                <div class="endpoints-container">
+                    <div class="endpoint-card">
+                        <div class="endpoint-header">
+                            <span class="endpoint-method post">POST</span>
+                            <span class="endpoint-path"
+                                >/v1/chat/completions</span
+                            >
+                        </div>
+                        <p class="endpoint-description">
+                            Generate conversational AI responses using various
+                            models
+                        </p>
+                        <a href="/docs#chat-completion" class="endpoint-link"
+                            >View Documentation</a
+                        >
+                    </div>
+                    <div class="endpoint-card">
+                        <div class="endpoint-header">
+                            <span class="endpoint-method post">POST</span>
+                            <span class="endpoint-path"
+                                >/v1/images/generations</span
+                            >
+                        </div>
+                        <p class="endpoint-description">
+                            Generate AI images from text prompts with various
+                            models and styles options
+                        </p>
+                        <a href="/docs#image-generation" class="endpoint-link"
+                            >View Documentation</a
+                        >
+                    </div>
+                    <div class="endpoint-card">
+                        <div class="endpoint-header">
+                            <span class="endpoint-method">GET</span>
+                            <span class="endpoint-path">/maker/brat</span>
+                        </div>
+                        <p class="endpoint-description">
+                            Generate an image of Brat album cover with customize
+                            text
+                        </p>
+                        <a href="/docs#whatsapp-messaging" class="endpoint-link"
+                            >View Documentation</a
+                        >
+                    </div>
+                    <div class="endpoint-card">
+                        <div class="endpoint-header">
+                            <span class="endpoint-method">GET</span>
+                            <span class="endpoint-path">/tools/tts</span>
+                        </div>
+                        <p class="endpoint-description">
+                            Generate speech audio from text with various voices
+                        </p>
+                        <a href="/docs#video-downloader" class="endpoint-link"
+                            >View Documentation</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        Featured <span class="gradient-text">Projects</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        Discover what developers have built using our API
+                    </p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div
+                            class="project-image"
+                            style="
+                                background-image: url(&quot;https://via.placeholder.com/300x200/121212/8be9fd?text=AI+Chatbot&quot;);
+                            "
+                        ></div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Chatbot Web App</h3>
+                            <p class="project-description">
+                                A sophisticated web-based chatbot leveraging
+                                AI-powered API for intelligent, real-time
+                                responses. Built with modern web technologies.
+                            </p>
+                            <div class="project-tech">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>AI API</span>
+                            </div>
+                            <a
+                                href="https://github.com/Nexavo999/ChatBot"
+                                class="project-link"
+                                target="_blank"
+                            >
+                                <span>Explore Project</span>
+                                <i class="material-symbols-outlined"
+                                    >arrow_forward</i
+                                >
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div
+                            class="project-image"
+                            style="
+                                background-image: url(&quot;https://via.placeholder.com/300x200/121212/ff79c6?text=Video+Downloader&quot;);
+                            "
+                        ></div>
+                        <div class="project-content">
+                            <h3 class="project-title">
+                                Universal Video Downloader
+                            </h3>
+                            <p class="project-description">
+                                A versatile video downloader supporting multiple
+                                platforms like YouTube, TikTok, and more.
+                                Download your favorite content with ease.
+                            </p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>Express</span>
+                                <span>Video API</span>
+                            </div>
+                            <a
+                                href="https://github.com/Nexavo999/All-Video-Downloader"
+                                class="project-link"
+                                target="_blank"
+                            >
+                                <span>Explore Project</span>
+                                <i class="material-symbols-outlined"
+                                    >arrow_forward</i
+                                >
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div
+                            class="project-image"
+                            style="
+                                background-image: url(&quot;https://via.placeholder.com/300x200/121212/bd93f9?text=AI+Image+Generator&quot;);
+                            "
+                        ></div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Image Generator</h3>
+                            <p class="project-description">
+                                Transform your imagination into breathtaking
+                                visuals with the power of AI. Just enter your
+                                creative prompt and watch your ideas come to
+                                life!
+                            </p>
+                            <div class="project-tech">
+                                <span>Vue.js</span>
+                                <span>Python</span>
+                                <span>Image API</span>
+                            </div>
+                            <a
+                                href="https://github.com/Nexavo999/Ai-Image-Generator"
+                                class="project-link"
+                                target="_blank"
+                            >
+                                <span>Explore Project</span>
+                                <i class="material-symbols-outlined"
+                                    >arrow_forward</i
+                                >
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div
+                            class="project-image"
+                            style="
+                                background-image: url(&quot;https://via.placeholder.com/300x200/121212/50fa7b?text=Storm+Editor&quot;);
+                            "
+                        ></div>
+                        <div class="project-content">
+                            <h3 class="project-title">Storm Editor</h3>
+                            <p class="project-description">
+                                A modern, AI-powered code editor built with
+                                Monaco Editor and Gemini 1.5 Pro. Features a
+                                sleek UI with context-aware AI assistance.
+                            </p>
+                            <div class="project-tech">
+                                <span>TypeScript</span>
+                                <span>Monaco</span>
+                                <span>AI API</span>
+                            </div>
+                            <a
+                                href="https://github.com/NikitHamal/StormEditor"
+                                class="project-link"
+                                target="_blank"
+                            >
+                                <span>Explore Project</span>
+                                <i class="material-symbols-outlined"
+                                    >arrow_forward</i
+                                >
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta-section">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Build Something Amazing?</h2>
+                    <p class="cta-description">
+                        Get started with our API today and join thousands of
+                        developers creating innovative solutions.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="/docs" class="btn btn-primary"
+                            >Read Documentation</a
+                        >
+                        <a
+                            href="https://github.com/Paxsenix0"
+                            class="btn btn-secondary"
+                            target="_blank"
+                            >Follow on GitHub</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Section -->
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-column">
+                        <h3 class="footer-title">PaxSenix-API</h3>
+                        <p class="footer-description">
+                            Empowering developers with free, powerful REST API
+                            services for innovative projects.
+                        </p>
+                        <div class="social-links">
+                            <a
+                                href="https://github.com/Paxsenix0"
+                                target="_blank"
+                                class="social-link"
+                            >
+                                <i class="material-symbols-outlined">code</i>
+                            </a>
+                            <a
+                                href="mailto:alex24dzn@proton.me"
+                                class="social-link"
+                            >
+                                <i class="material-symbols-outlined">mail</i>
+                            </a>
+                            <a
+                                href="https://paxsenix.biz.id"
+                                class="social-link"
+                            >
+                                <i class="material-symbols-outlined">public</i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-subtitle">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="/docs">Documentation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-subtitle">API Categories</h3>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="/docs#ai">AI LLMs</a>
+                            </li>
+                            <li><a href="/docs#ai">AI Image Editor</a></li>
+                            <li>
+                                <a href="/docs#downloader"
+                                    >All Platform Downloader</a
+                                >
+                            </li>
+                            <li><a href="/docs#tools">Utility Tools</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-subtitle">Resources</h3>
+                        <ul class="footer-links">
+                            <li><a href="/docs">API Reference</a></li>
+                            <li><a href="/examples">Code Examples</a></li>
+                            <li><a href="/status">API Status</a></li>
+                            <li><a href="/terms">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        © 2025 PaxSenix. Created by
+                        <a href="https://github.com/Paxsenix0" target="_blank"
+                            >Alex</a
+                        >.
+                    </p>
+                    <p>Powered by me >:)</p>
+                </div>
+            </footer>
+        </main>
+
+        <script src="./app.js"></script>
+    </body>
+</html>
