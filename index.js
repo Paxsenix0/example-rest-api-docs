@@ -49,7 +49,9 @@ app.use(cors({
 app.use(express.json());
 app.use(rateLimiter.middleware());
 
-app.get('/', (req, res) => res.status(404).json({ message: "No, go to /docs instead." }));
+app.get('/', (req, res) => res.sendFile(path.join(process.cwd(), "public", "dashboard", "index.html")));
+app.get('/style.css', (req, res) => res.sendFile(path.join(process.cwd(), "public", "dashboard", "style.css")));
+app.get('/app.js', (req, res) => res.sendFile(path.join(process.cwd(), "public", "dashboard", "app.js")));
 app.get('/docs', (req, res) => res.sendFile(path.join(process.cwd(), "public", "docs", "index.html")));
 app.get('/docs/styles.css', (req, res) => res.sendFile(path.join(process.cwd(), "public", "docs", "styles.css")));
 app.get('/docs/app.js', (req, res) => res.sendFile(path.join(process.cwd(), "public", "docs", "app.js")));
